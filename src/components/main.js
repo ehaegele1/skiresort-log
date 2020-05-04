@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './form.js';
-import Resorts from './resort.js';
+import Resorts from './Resorts.js';
+import Nav from './nav.js';
 
 let baseURL = '';
 if (process.env.NODE_ENV === 'development') {
@@ -13,12 +14,10 @@ class Main extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            resorts: [],
+            resort: [],
         }
     }
-
-
-    fetchResorts = () => {
+fetchResorts = () => {
       fetch(`${baseURL}/resorts`)
       .then(data => data.json())
       .then(jData => {
@@ -63,7 +62,7 @@ class Main extends React.Component {
             }
         }).then(updateResort => {
             this.props.handleView('home')
-            this.fetchUserResorts()
+            this.fetchResorts()
         }).catch((err) => console.log(err))
     }
 
@@ -85,7 +84,7 @@ class Main extends React.Component {
     //   render after parents
     componentDidMount(){
         this.fetchResorts()
-        this.fetchUserResorts()
+
     }
 
     //=======| RENDER |========
@@ -93,14 +92,14 @@ class Main extends React.Component {
         return (
             <>
             <div class='Resortlog'>
-                <h1>Ski Resort Tracker</h1>
+                <h1>Ski Resort Log</h1>
                 <button className="resortButton" onClick={this.fetchResorts}>Create a Resort</button>
                 <Resorts resorts={this.state.resorts} />
             </div>
             <div class='resortCreator'>
             <h1 class='resortsTitle'>{this.props.view.pageTitle}</h1>
-            {this.props.view.page === 'home' ? this.state.resorts.map((resortData) => (
-              <resorts
+            {this.props.view.page === 'home' ? this.state.resort.map((resortData) => (
+              <Resorts
                 key={resortData.id}
                 resortData={resortData}
                 handleView = {this.props.handleView}

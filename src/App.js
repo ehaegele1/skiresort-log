@@ -5,6 +5,8 @@ import Nav from './components/nav.js';
 
 
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -15,7 +17,7 @@ class App extends React.Component {
       },
       formInputs: {
         location: null,
-        photo: null,
+        mountain: null,
         id: null
       }
     }
@@ -25,21 +27,21 @@ class App extends React.Component {
     let pageTitle = '';
     let formInputs = {
       location: '',
-      photo: '',
+      mountain: '',
       id: null
     }
     switch (view) {
       case 'home':
         pageTitle = 'Resorts'
         break
-      case 'addJoke':
-        pageTitle = 'Create reosorts'
+      case 'addResorts':
+        pageTitle = 'Create resorts'
         break
       case 'editResort':
         pageTitle = 'Edit resorts'
         formInputs = {
           location: resortData.location,
-          photo: resortData.photo,
+          mountain: resortData.mountain,
           id: resortData.id
         }
         break
@@ -65,7 +67,11 @@ class App extends React.Component {
           <h5>Keep Shredding!</h5>
         </header>
 
+        <div>
+        <Nav handleView={this.handleView} />
+
     
+      </div>
 
       </div>
     )
