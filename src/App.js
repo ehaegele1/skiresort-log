@@ -69,8 +69,11 @@ class App extends React.Component {
 
         <div>
         <Nav handleView={this.handleView} />
-
-    
+        <Main
+          view={this.state.view}
+          handleView={this.handleView}
+          formInputs={this.state.formInputs}
+        />
       </div>
 
       </div>
