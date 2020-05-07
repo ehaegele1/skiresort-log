@@ -15,7 +15,7 @@ class Resorts extends React.Component {
     return (
       <article class='createResort'>
 
-        <div className="resort-body">
+        <div>
           {this.props.resortData.location}
           {this.props.resortData.mountain}
         </div>

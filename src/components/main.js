@@ -1,20 +1,19 @@
 import React from 'react';
 import Form from './form.js';
 import Resorts from './Resorts.js';
-import Nav from './nav.js';
 
 let baseURL = '';
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:8000';
 } else {
-  baseURL = 'https://resortsapi.herokuapp.com/'
+  baseURL = 'https://resortsapi.herokuapp.com'
 }
 
 class Main extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            resort: [],
+            resorts: []
         }
     }
 fetchResorts = () => {
@@ -22,7 +21,7 @@ fetchResorts = () => {
       .then(data => data.json())
       .then(jData => {
         this.setState({
-          resort: jData
+          resorts: jData
         })
       }).catch(err => console.log(err))
     }
@@ -39,8 +38,6 @@ fetchResorts = () => {
           .then(createdResort => {
             return createdResort.json()
           })
-          // .then(res => res.text()) --- testing
-          // .then(text => console.log(text)) -- testing
           .then(jsonedResort => {
             this.props.handleView('home')
             this.setState(prevState => {
@@ -91,14 +88,9 @@ fetchResorts = () => {
     render() {
         return (
             <>
-            <div class='Resortlog'>
-                <h1>Ski Resort Log</h1>
-                <button className="resortButton" onClick={this.fetchResorts}>Create a Resort</button>
-                <Resorts resorts={this.state.resorts} />
-            </div>
             <div class='resortCreator'>
             <h1 class='resortsTitle'>{this.props.view.pageTitle}</h1>
-            {this.props.view.page === 'home' ? this.state.resort.map((resortData) => (
+            {this.props.view.page === 'home' ? this.state.resorts.map((resortData) => (
               <Resorts
                 key={resortData.id}
                 resortData={resortData}

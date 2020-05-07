@@ -1,1 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #63DBFF;
+    font-family: 'Permanent Marker', cursive;
+ 
+
+}
+h1{
+    text-align: left;
+    font-size: 60px;
+    margin-top: 0;
+    color: #1A3942;
+    padding-left: 60px;
+   
+
+}
+h5{
+    font-size: 40px;
+    text-align: left;
+    padding-bottom: 100px;
+    color: #1A3942;;
+    padding-left: 60px;
+}
+.top{
+    background-image: url(https://i1.wp.com/linkedinheaders.com/wp-content/uploads/2018/02/mountain-header.jpg?fit=1584%2C396&ssl=1);
+    margin-bottom: 0;
+}
+
+.navbar{
+    background-color: #4BA4BF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    
+    
+ }
+.homeButton{
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 200px;
+    font-size: 40px;
+    background-color: #4BA4BF;
+    color: #1A3942;
+    font-family: 'Permanent Marker', cursive;
+    border: 3px;
+    border-color:#326D80
+}
+
+.homeButton:hover{
+    background-color:cornflowerblue;
+    cursor: pointer;
+}
+.addResortButton{
+    text-align: center;
+    font-size: 40px;
+    background-color: #4BA4BF;
+    color: #1A3942;
+    font-family: 'Permanent Marker', cursive;
+    border: 3px;
+    border-color:#326D80
+}
+.addResortButton:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.resortsTitle{
+
+    text-align: center;
+}
+
+form{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+.mountain{
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+.formButton{
+background-color: #4BA4BF;
+font-family: 'Permanent Marker', cursive;
+color: #1A3942;
+border-width: 3px;
+border-color: #1A3942;
+font-size: 20px;
+}
+.formButton:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.grid-container {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 200px 200px 200px;
+    background-color:#63DBFF;
+
+   
+}
+.grid-item1 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    ;
+    background-image: url(https://skimap.org/data/530/3096/1525055000.jpeg);
+    background-size: cover;
+
+}
+.grid-item2 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://images.vailresorts.com/image/upload/c_scale,dpr_3.0,f_auto,q_auto,w_500/v1/Park%20City/Products/Brochure/The%20Mountain/About%20the%20Mountain/Trail%20Map/1920_PC_TrailMap_2.jpg);
+    background-size: cover;
+    ;
+
+}
+.grid-item3 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://media.skigebiete-test.de/images/ecu/entity/e_skiresort/ski-resort_aspen-snowmass_n4783-136656-1_raw.jpg);
+    background-size: cover;
+    ;
+
+}
+.grid-item4 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://bigbeartodaymag.com/wp-content/uploads/2017/01/SnowSummitTrailMapforWeb.jpg);
+    background-size: cover;
+    ;
+
+}
+.grid-item5 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://surflanding.files.wordpress.com/2015/03/surf-landing-mountain-high-trail-map.jpg);
+
+    background-size: cover;
+    ;
+
+}
+.grid-item6 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://skimap.org/data/544/2200/1511456069jpg_render.jpg);
+    background-size: cover;
+    ;
+
+}
+.grid-item7 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://www.skibutlers.com/blob/image/aUN1K2ZhUUZYQ2M90);
+    background-size: cover;
+    ;
+
+}
+.grid-item8 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://skimap.org/data/510/3535/1575416104jpg_render.jpg);
+    background-size: cover;
+    ;
+
+}
+.grid-item9 {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    background-image: url(https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_auto/v1/Whistler%20Blackcomb/Products/The%20Mountain/About%20the%20Mountain/Trail%20Map/EM_Whistler_map_2018-19_2048x1343.jpg);
+    background-size: cover;
+    ;
+
+}
 

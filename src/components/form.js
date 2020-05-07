@@ -48,10 +48,10 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label class='location'>
           Location
-          <input class='placerholderLocation' type="text" placeholder="location" id="setup" value={this.state.location} onChange={this.handleChange}/>
+          <input class='placerholderLocation' type="text" placeholder="location" id="location" value={this.state.location} onChange={this.handleChange}/>
         </label>
-        <label class='photo'>
-          Photo
+        <label class='mountain'>
+        Mountain
           <input class='placerholderMountain' type="text" placeholder="your mountain" id="mountain" value={this.state.mountain} onChange={this.handleChange}/>
         </label>
         <input class='formButton' type="submit" value="Add Resort"/>
